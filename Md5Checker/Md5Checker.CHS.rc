@@ -1,0 +1,513 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_MD5CHECKER ACCELERATORS 
+BEGIN
+    "O",            ID_ACCEL_EDIT_ADD,      VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_ACCEL_EDIT_ADD,      VIRTKEY, NOINVERT
+    "N",            ID_ACCEL_EDIT_CLEAR,    VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_ACCEL_EDIT_COMPARE_MD5, VIRTKEY, NOINVERT
+    "C",            ID_ACCEL_EDIT_COPY,     VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_ACCEL_EDIT_DISCARDED, VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_ACCEL_EDIT_REMOVE,   VIRTKEY, NOINVERT
+    "A",            ID_ACCEL_EDIT_SELECT_ALL, VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      ID_ACCEL_EDIT_START,    VIRTKEY, NOINVERT
+    VK_ESCAPE,      ID_ACCEL_EDIT_STOP,     VIRTKEY, NOINVERT
+    "S",            ID_ACCEL_FILE_SAVE,     VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_ACCEL_FILE_SAVE_EACH, VIRTKEY, SHIFT, CONTROL, NOINVERT
+    VK_F1,          ID_ACCEL_ONLINE_HELP,   VIRTKEY, NOINVERT
+    VK_F3,          ID_ACCEL_VIEW_LOCATE,   VIRTKEY, NOINVERT
+    VK_RETURN,      ID_ACCEL_VIEW_PROPERTIES, VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 0, 0, 240, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Md5Checker"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,95,66,50,14
+    ICON            IDI_MD5CHECKER,IDC_STATIC,6,6,20,20
+    LTEXT           "Md5Checker 版本 3.3",IDC_STATIC,32,6,202,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2006-2007 nf_xp。",IDC_STATIC,32,18,202,8
+    LTEXT           "主页:",IDC_STATIC,6,32,40,8
+    CONTROL         "http://cn.getmd5checker.com/",IDC_HOMEPAGE_URL,"Button",BS_OWNERDRAW | WS_TABSTOP,49,31,185,10
+    LTEXT           "下载:",IDC_STATIC,6,44,40,8
+    CONTROL         "http://cn.getmd5checker.com/download/",IDC_DOWNLOAD_URL,
+                    "Button",BS_OWNERDRAW | WS_TABSTOP,49,43,185,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,58,228,1
+END
+
+IDD_PROPPAGE_ADD DIALOGEX 0, 0, 212, 188
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "添加"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "自动开始验证(&S)",IDC_AUTO_START,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,6,200,10
+    GROUPBOX        "添加文件夹",IDC_STATIC,6,22,200,82
+    LTEXT           "包括(&I):",IDC_STATIC,12,36,188,8
+    COMBOBOX        IDC_INCLUDE,12,46,188,62,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "排除(&E):",IDC_STATIC,12,62,188,8
+    EDITTEXT        IDC_EXCLUDE,12,72,188,12,ES_AUTOHSCROLL
+    CONTROL         "添加子文件夹(&R)",IDC_RECURSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,88,188,10
+END
+
+IDD_PROPPAGE_SAVE DIALOGEX 0, 0, 212, 188
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "保存"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "默认 MD5 文件名",IDC_STATIC,6,6,97,58
+    CONTROL         "使用文件夹名(&F)",IDC_FOLDERNAME,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,20,85,10
+    CONTROL         "指定文件名(&N):",IDC_SPECIFY_NAME,"Button",BS_AUTORADIOBUTTON,12,34,85,10
+    EDITTEXT        IDC_SPECIFIED_NAME,22,46,75,12,ES_AUTOHSCROLL
+    GROUPBOX        "Md5 项分隔符",IDC_STATIC,109,6,97,58
+    CONTROL         "空格星号(&S) "" *""",IDC_ID_SPACE_ASTERISK,"Button",BS_AUTORADIOBUTTON | WS_GROUP,115,20,85,10
+    CONTROL         "双空格(&T) ""  """,IDC_ID_SPACES,"Button",BS_AUTORADIOBUTTON,115,34,85,10
+    CONTROL         "竖线(&V) ""|""",IDC_ID_VERTICAL_BAR,"Button",BS_AUTORADIOBUTTON,115,48,85,10
+    GROUPBOX        "换行符",IDC_STATIC,6,70,97,58
+    CONTROL         "Windows(&D) (CR-LF)",IDC_LF_CR_LF,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,84,85,10
+    CONTROL         "Linux(&U) (LF)",IDC_LF_LF,"Button",BS_AUTORADIOBUTTON,12,98,85,10
+    CONTROL         "Macintoch(&M) (CR)",IDC_LF_CR,"Button",BS_AUTORADIOBUTTON,12,112,85,10
+    GROUPBOX        "路径分隔符",IDC_STATIC,109,70,97,58
+    CONTROL         "Windows(&W) ""\\""",IDC_PD_BACKSLASH,"Button",BS_AUTORADIOBUTTON | WS_GROUP,115,84,85,10
+    CONTROL         "Linux(&L) ""/""",IDC_PD_SLASH,"Button",BS_AUTORADIOBUTTON,115,98,85,10
+    GROUPBOX        "保存到",IDC_STATIC,6,134,200,30
+    CONTROL         "总是保存完整路径(&P)",IDC_SAVE_TO_FULL_PATH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,148,188,10
+END
+
+IDD_PROPPAGE_INTEGRATION DIALOGEX 0, 0, 212, 188
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "集成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "系统",IDC_STATIC,6,6,200,72
+    CONTROL         "关联 MD5 文件(&M)",IDC_ASSOCIATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,20,188,10
+    CONTROL         "创建开始菜单快捷方式(&P)",IDC_SHORTCUT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,34,188,10
+    CONTROL         "添加到系统右键菜单(&S)",IDC_INTEGRATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,48,188,10
+    CONTROL         "添加到发送到菜单(&T)",IDC_SEND_TO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,62,188,10
+END
+
+IDD_PROPPAGE_ADVANCED DIALOGEX 0, 0, 212, 188
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "高级"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "工作在低优先级下(&W) (下次添加/验证时生效)",IDC_LOW_PRIORITY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,6,200,10
+    CONTROL         "保存最后使用文件夹(&S)",IDC_STORE_LFU,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,20,200,10
+    GROUPBOX        "代码页(&C)",IDC_STATIC,6,36,200,32
+    COMBOBOX        IDC_CODE_PAGE,12,50,188,112,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "隐藏对话框 (按下 Shift 键显示)",IDC_STATIC,6,74,200,30
+    CONTROL         "添加选项(&O)",IDC_HIDE_ADD_OPTIONS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,88,92,10
+    CONTROL         "保存选项(&V)",IDC_HIDE_SAVE_OPTIONS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,108,88,92,10
+    LTEXT           "还原所有选项为默认值",IDC_STATIC,6,169,148,8
+    PUSHBUTTON      "默认值(&D)",IDC_DEFAULT,156,168,50,14
+END
+
+IDD_ADD_OPTIONS_EMBEDDED DIALOGEX 0, 0, 276, 82
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "选项",IDC_STATIC,6,0,264,76
+    CONTROL         "自动开始验证(&A)",IDC_AUTO_START,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,14,124,10
+    CONTROL         "仅验证新 md5 项(&K)",IDC_CHECK_NEW_ONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,140,14,124,10
+    LTEXT           "包括文件夹中(&C):",IDC_STATIC,12,29,72,8
+    COMBOBOX        IDC_INCLUDE,88,28,176,62,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "排除文件夹中(&E):",IDC_STATIC,12,45,72,8
+    EDITTEXT        IDC_EXCLUDE,88,44,176,12,ES_AUTOHSCROLL
+    CONTROL         "添加子文件夹(&U)",IDC_RECURSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,60,124,10
+    CONTROL         "保存设置(&S)",IDC_SAVE_SETTINGS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,204,60,60,10,WS_EX_RIGHT
+END
+
+IDD_ADD_OPTIONS_STANDALONE DIALOGEX 0, 0, 240, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "添加选项"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "自动开始验证(&A)",IDC_AUTO_START,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,6,228,10
+    CONTROL         "仅验证新 md5 项(&C)",IDC_CHECK_NEW_ONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,18,218,10
+    GROUPBOX        "添加文件夹",IDC_STATIC,6,34,228,82
+    LTEXT           "包括(&I):",IDC_STATIC,12,48,216,8
+    COMBOBOX        IDC_INCLUDE,12,58,216,62,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "排除(&E):",IDC_STATIC,12,74,216,8
+    EDITTEXT        IDC_EXCLUDE,12,84,216,12,ES_AUTOHSCROLL
+    CONTROL         "添加子文件夹(&R)",IDC_RECURSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,100,216,10
+    CONTROL         "保存设置(&S)",IDC_SAVE_SETTINGS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,122,228,10
+    DEFPUSHBUTTON   "确定",IDOK,68,138,50,14
+    PUSHBUTTON      "取消",IDCANCEL,122,138,50,14
+    CONTROL         "仅在 Shift 键按下时显示本对话框(&O)",IDC_HIDE_ADD_OPTIONS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,158,228,10
+END
+
+IDD_SAVE_OPTIONS_EMBEDDED DIALOGEX 0, 0, 276, 78
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "选项",IDC_STATIC,6,0,264,72
+    LTEXT           "Md5 项分隔符:",IDC_STATIC,12,15,60,8
+    CONTROL         "空格星号(&P)",IDC_ID_SPACE_ASTERISK,"Button",BS_AUTORADIOBUTTON | WS_GROUP,76,14,60,10
+    CONTROL         "双空格(&W)",IDC_ID_SPACES,"Button",BS_AUTORADIOBUTTON,140,14,60,10
+    CONTROL         "竖线(&V)",IDC_ID_VERTICAL_BAR,"Button",BS_AUTORADIOBUTTON,204,14,60,10
+    LTEXT           "换行符:",IDC_STATIC,12,29,60,8
+    CONTROL         "Windows(&D)",IDC_LF_CR_LF,"Button",BS_AUTORADIOBUTTON | WS_GROUP,76,28,60,10
+    CONTROL         "Linux(&U)",IDC_LF_LF,"Button",BS_AUTORADIOBUTTON,140,28,60,10
+    CONTROL         "Macintoch(&M)",IDC_LF_CR,"Button",BS_AUTORADIOBUTTON,204,28,60,10
+    LTEXT           "路径分隔符:",IDC_STATIC,12,43,60,8
+    CONTROL         "Windows(&O)",IDC_PD_BACKSLASH,"Button",BS_AUTORADIOBUTTON | WS_GROUP,76,42,60,10
+    CONTROL         "Linux(&X)",IDC_PD_SLASH,"Button",BS_AUTORADIOBUTTON,140,42,60,10
+    CONTROL         "总是保存完整路径(&F)",IDC_SAVE_TO_FULL_PATH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,56,186,10
+    CONTROL         "保存设置(&A)",IDC_SAVE_SETTINGS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,204,56,60,10,WS_EX_RIGHT
+END
+
+IDD_SAVE_OPTIONS_STANDALONE DIALOGEX 0, 0, 240, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "保存选项"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "默认 MD5 文件名",IDC_STATIC,6,6,111,58
+    CONTROL         "使用文件夹名(&F)",IDC_FOLDERNAME,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,20,99,10
+    CONTROL         "指定文件名(&N):",IDC_SPECIFY_NAME,"Button",BS_AUTORADIOBUTTON,12,34,99,10
+    EDITTEXT        IDC_SPECIFIED_NAME,22,46,89,12,ES_AUTOHSCROLL
+    GROUPBOX        "Md5 项分隔符",IDC_STATIC,123,6,111,58
+    CONTROL         "空格星号(&S) "" *""",IDC_ID_SPACE_ASTERISK,"Button",BS_AUTORADIOBUTTON | WS_GROUP,129,20,99,10
+    CONTROL         "双空格(&T) ""  """,IDC_ID_SPACES,"Button",BS_AUTORADIOBUTTON,129,34,99,10
+    CONTROL         "竖线(&V) ""|""",IDC_ID_VERTICAL_BAR,"Button",BS_AUTORADIOBUTTON,129,48,99,10
+    GROUPBOX        "换行符",IDC_STATIC,6,70,111,58
+    CONTROL         "Windows(&D) (CR-LF)",IDC_LF_CR_LF,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,84,99,10
+    CONTROL         "Linux(&U) (LF)",IDC_LF_LF,"Button",BS_AUTORADIOBUTTON,12,98,99,10
+    CONTROL         "Macintoch(&M) (CR)",IDC_LF_CR,"Button",BS_AUTORADIOBUTTON,12,112,99,10
+    GROUPBOX        "路径分隔符",IDC_STATIC,123,70,111,58
+    CONTROL         "Windows(&W) ""\\""",IDC_PD_BACKSLASH,"Button",BS_AUTORADIOBUTTON | WS_GROUP,129,84,99,10
+    CONTROL         "Linux(&L) ""/""",IDC_PD_SLASH,"Button",BS_AUTORADIOBUTTON,129,98,99,10
+    CONTROL         "保存设置(&A)",IDC_SAVE_SETTINGS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,134,228,10
+    DEFPUSHBUTTON   "确定",IDOK,68,150,50,14
+    PUSHBUTTON      "取消",IDCANCEL,122,150,50,14
+    CONTROL         "仅在 Shift 键按下时显示本对话框(&O)",IDC_HIDE_SAVE_OPTIONS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,170,228,10
+END
+
+IDD_COMPARE_MD5 DIALOGEX 0, 0, 240, 82
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "比较 MD5 值"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_FILE_PATH_1,6,6,228,8,SS_NOPREFIX | SS_PATHELLIPSIS
+    EDITTEXT        IDC_MD5_1,6,16,174,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_COMPARE_RESULT,184,16,50,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "",IDC_FILE_PATH_2,6,32,228,8,SS_NOPREFIX | SS_PATHELLIPSIS
+    EDITTEXT        IDC_MD5_2,6,43,174,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "粘贴(&P)",IDC_PASTE_MD5,184,42,50,14
+    DEFPUSHBUTTON   "关闭",IDCLOSE,95,62,50,14
+END
+
+IDD_MD5_CALCULATOR DIALOGEX 0, 0, 240, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MD5 值计算器"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TEXT_INPUT,6,6,228,124,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "Unicode(&U)",IDC_UNICODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,132,228,10
+    EDITTEXT        IDC_MD5_OUTPUT,6,148,228,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "计算(&A)",IDC_CALCULATE_MD5,6,166,50,14
+    PUSHBUTTON      "复制(&C)",IDC_COPY_MD5,60,166,50,14
+    DEFPUSHBUTTON   "关闭",IDCLOSE,184,166,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MD5CHECKER          ICON                    "res\\Md5Checker.ico"
+IDI_SMALL               ICON                    "res\\small.ico"
+IDI_MD5CHECKER_DOC      ICON                    "res\\Md5CheckerDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_MD5CHECKER MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "保存(&S)\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM "保存单项(&E)\tCtrl+Shift+S",      ID_FILE_SAVE_EACH
+        MENUITEM "保存到(&T)...",                  ID_FILE_SAVE_TO
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_FILE_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "添加/打开(&O)...\tIns",           ID_EDIT_ADD
+        MENUITEM "移除(&R)\tDel",                 ID_EDIT_REMOVE
+        MENUITEM "清空(&L)\tCtrl+N",              ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "开始(&S)\tEnter",               ID_EDIT_START
+        MENUITEM "停止(&T)\tEsc",                 ID_EDIT_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "比较 MD5 值(&E)\tF2",            ID_EDIT_COMPARE_MD5
+        MENUITEM SEPARATOR
+        MENUITEM "复制(&C)\tCtrl+C",              ID_EDIT_COPY
+        MENUITEM "复制 MD5 值(&M)",                ID_EDIT_COPY_MD5
+        MENUITEM "复制路径(&P)",                    ID_EDIT_COPY_PATHS
+        MENUITEM SEPARATOR
+        MENUITEM "废除的(&D)\tCtrl+Del",           ID_EDIT_DISCARDED
+        MENUITEM SEPARATOR
+        MENUITEM "全部选定(&A)\tCtrl+A",            ID_EDIT_SELECT_ALL
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "全部(&A)",                      ID_VIEW_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "不可用(&N)",                     ID_VIEW_NA
+        MENUITEM "未知(&U)",                      ID_VIEW_UNKNOWN
+        MENUITEM "载入(&D)",                      ID_VIEW_LOADED
+        MENUITEM "新增(&E)",                      ID_VIEW_NEW
+        MENUITEM "失败(&F)",                      ID_VIEW_FAILED
+        MENUITEM "通过(&P)",                      ID_VIEW_PASSED
+        MENUITEM SEPARATOR
+        MENUITEM "定位(&L)\tF3",                  ID_VIEW_LOCATE
+        MENUITEM "属性(&O)\tAlt+Enter",           ID_VIEW_PROPERTIES
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "自验证(&S)",                     ID_TOOLS_SELFCHECK
+        MENUITEM "MD5 值计算器(&C)...",             ID_TOOLS_MD5_CALCULATOR
+        MENUITEM SEPARATOR
+        MENUITEM "选项(&O)...",                   ID_TOOLS_OPTIONS
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "在线帮助(&O)",                    ID_ONLINE_HELP
+        MENUITEM "检查更新(&U)",                    ID_HELP_CHECK_FOR_UPDATES
+        MENUITEM SEPARATOR
+        MENUITEM "关于 Md5Checker(&A)...",        ID_HELP_ABOUT
+    END
+END
+
+IDR_CONTEXT_MENUS MENU 
+BEGIN
+    POPUP "0"
+    BEGIN
+        MENUITEM "移除(&R)",                      ID_EDIT_REMOVE
+        MENUITEM SEPARATOR
+        MENUITEM "比较 MD5 值(&E)",                ID_EDIT_COMPARE_MD5
+        MENUITEM SEPARATOR
+        MENUITEM "复制(&C)",                      ID_EDIT_COPY
+        MENUITEM "复制 MD5 值(&M)",                ID_EDIT_COPY_MD5
+        MENUITEM "复制路径(&P)",                    ID_EDIT_COPY_PATHS
+        MENUITEM SEPARATOR
+        MENUITEM "废除的(&D)",                     ID_EDIT_DISCARDED
+        MENUITEM SEPARATOR
+        MENUITEM "定位(&L)",                      ID_VIEW_LOCATE
+        MENUITEM "属性(&O)",                      ID_VIEW_PROPERTIES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,3,0,12
+ PRODUCTVERSION 3,3,0,12
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "FileDescription", "Md5Checker"
+            VALUE "FileVersion", "3, 3, 0, 12"
+            VALUE "InternalName", "Md5Checker"
+            VALUE "LegalCopyright", "版权所有 (C) 2006-2007 nf_xp。"
+            VALUE "OriginalFilename", "Md5Checker.exe"
+            VALUE "ProductName", "Md5Checker"
+            VALUE "ProductVersion", "3, 3, 0, 12"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MAIN_TOOLBAR        BITMAP                  "res\\MainToolbar.bmp"
+IDB_VIEW_TOOLBAR        BITMAP                  "res\\ViewToolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND                CURSOR                  "res\\Hand.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDC_MD5CHECKER          "MD5CHECKER"
+    IDS_APP_TITLE           "Md5Checker"
+    IDS_APP_DESC            "管理、计算及验证文件的 MD5 值。"
+    IDS_FILE_TYPE           "MD5 文件"
+    IDS_FILE_FILTER         "所有文件(*.*)\n*.*\nMD5 文件(*.md5)\n*.md5\n"
+    IDS_SHELL_CONTEXT_MENU  "用 Md5Checker 验证(&M)"
+    IDS_SCM_CHECK_NEW_ONLY  "用 Md5Checker 验证新文件(&N)"
+    IDS_VERSION_URL         "http://getmd5checker.com/last/version.txt"
+    IDS_DOWNLOAD_URL        "http://cn.getmd5checker.com/download/"
+    IDS_HELP_URL            "http://cn.getmd5checker.com/how-to/"
+    IDS_NAME                "名称"
+    IDS_IN_FOLDER           "所在文件夹"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CURRENT_MD5         "当前 MD5 值"
+    IDS_SAVED_MD5           "保存的 MD5 值"
+    IDS_SIZE                "大小"
+    IDS_DATE_MODIFIED       "修改日期"
+    IDS_STATUS_BAR_UNSELECTED "%d 个对象"
+    IDS_STATUS_BAR_SELECTED "选定 %d 个对象"
+    IDS_STATUS_BAR_ADDING   "添加 - %s"
+    IDS_STATUS_BAR_CHECKING "验证了 %d/%d 个对象 - %s"
+    IDS_OFN_FOLDER          "(打开当前文件夹)"
+    IDS_OPTIONS_CAPTION     "选项"
+    IDS_DEFAULT_CODE_PAGE_NAME "默认值"
+    IDS_NONE                "(无)"
+    IDS_SAME                "相同"
+    IDS_DIFFERENT           "不同"
+    IDS_ABORT               "中止"
+    IDS_ABORT_ADDING        "您确定要中止添加吗？"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SAVING_FAILED       "不能保存文件 %s。\n请确认您是否拥有权限。"
+    IDS_CHECK_FOR_UPDATES   "检查更新"
+    IDS_CFU_ERROR           "检查更新失败，请稍后重试。"
+    IDS_CFU_NA              "您的版本已经是最新的了。"
+    IDS_CFU_AVAILABLE       "有新的版本，您要现在更新吗?\n点击是前往下载页面。"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVE            "保存"
+    ID_FILE_SAVE_EACH       "保存单项"
+    ID_FILE_SAVE_TO         "保存到"
+    ID_EDIT_ADD             "添加"
+    ID_EDIT_REMOVE          "移除"
+    ID_EDIT_CLEAR           "清空"
+    ID_EDIT_START           "开始"
+    ID_EDIT_STOP            "停止"
+    ID_EDIT_COPY            "复制"
+    ID_EDIT_COPY_MD5        "复制 MD5"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_ALL             "全部(%d)"
+    ID_VIEW_NA              "不可用(%d)"
+    ID_VIEW_UNKNOWN         "未知(%d)"
+    ID_VIEW_LOADED          "载入(%d)"
+    ID_VIEW_NEW             "新增(%d)"
+    ID_VIEW_FAILED          "失败(%d)"
+    ID_VIEW_PASSED          "通过(%d)"
+    ID_VIEW_LOCATE          "定位"
+    ID_VIEW_PROPERTIES      "属性"
+    ID_TOOLS_OPTIONS        "选项"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

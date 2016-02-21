@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Md5Checker", "Md5Checker\Md5Checker.vcproj", "{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{82FCC59F-9F46-43BB-9E5D-F4094F1AF5A3}"
+	ProjectSection(SolutionItems) = preProject
+		cleanup.cmd = cleanup.cmd
+		cleanupBin.cmd = cleanupBin.cmd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Specs", "Specs", "{7889A71C-9DBF-4356-8B16-0F9208391552}"
+	ProjectSection(SolutionItems) = preProject
+		Tasks.xlsx = Tasks.xlsx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Md5Checker\\Md5Checker.vcproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = Md5Checker\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		9x_cn|Win32 = 9x_cn|Win32
+		9x_en|Win32 = 9x_en|Win32
+		Debug.MBCS|Win32 = Debug.MBCS|Win32
+		Debug.Unicode|Win32 = Debug.Unicode|Win32
+		nt_cn|Win32 = nt_cn|Win32
+		nt_en|Win32 = nt_en|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.9x_cn|Win32.ActiveCfg = 9x_cn|Win32
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.9x_cn|Win32.Build.0 = 9x_cn|Win32
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.9x_en|Win32.ActiveCfg = 9x_en|Win32
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.9x_en|Win32.Build.0 = 9x_en|Win32
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.Debug.MBCS|Win32.ActiveCfg = Debug.MBCS|Win32
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.Debug.MBCS|Win32.Build.0 = Debug.MBCS|Win32
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.Debug.Unicode|Win32.ActiveCfg = Debug.Unicode|Win32
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.Debug.Unicode|Win32.Build.0 = Debug.Unicode|Win32
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.nt_cn|Win32.ActiveCfg = nt_cn|Win32
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.nt_cn|Win32.Build.0 = nt_cn|Win32
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.nt_en|Win32.ActiveCfg = nt_en|Win32
+		{36A4A2E1-FE4E-4FAE-86F4-D2662D5A8302}.nt_en|Win32.Build.0 = nt_en|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
